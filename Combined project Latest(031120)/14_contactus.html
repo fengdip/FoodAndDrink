@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact Us</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type = "text/javascript"  src = "validation.js" >
+  </script>
+</head>
+<body>
+
+	<div id="wrapper">
+
+    <header>
+      <h1>
+        <img src="4717.png"width="500" height="120">
+      </h1>
+    </header>
+
+  <div id="leftcolumn">
+      <nav>
+        <br>
+          <ul style="padding-left: 0px;">
+            <a href="11_index.html">
+              <li>
+                <div style="height: 50px;text-align: center;"  >
+                 <button  type="button" class="button" >
+                    Home</button>
+                </div>
+                
+              </li>
+            </a>
+            <a href="12_food.html">
+              <li>
+                <div style="height: 50px;text-align: center;padding-top: 50px;" >
+                 <button  type="button" class="button">
+                    Xin's</button>
+                </div>
+              </li>
+            </a>
+            <a href="menu.html">
+              <li>
+                <div style="height: 50px;text-align: center;padding-top: 50px;" >
+                 <button  type="button" class="button">
+                    N-Tea-U</button>
+                </div>
+              </li>
+            </a>
+            <a href="14_contactus.html">
+              <li>
+                <div style="height: 50px;text-align: center;padding-top: 50px;" >
+                  <button  type="button" class="button">
+                    Contact Us</button>
+                </div>
+              </li>
+            </a>
+        </ul>
+    </nav>
+    </div>
+
+    <div id="rightcolumn" style="padding-bottom: 40px">
+      <div>
+        <h2 style="text-align: left; padding-left: 40px">
+        Feedback Form
+        </h2>
+        <p style="text-align: left; padding-left: 40px">
+         Any feedbacks are welcomed! Required fields are marked with an asterisk *.
+        </p> 
+      </div>
+      <div align="right" style="padding-right: 1000px;">
+        <form action="contacussubmit.php" method="post">
+
+          <font  color="black">*</font>Name:   <input  type="text"  id="custName" name="name"size="20" required   ><br><br>  <!--onkeyup to trigger effect -->
+
+
+          <font color="black">*</font>Email:   <input type="text"   id="custEmail" name="email" size="20" required><br><br>
+          <div style="text-align: top;">
+            <font color="black">*</font>Feedback: 
+            <textarea align="text" name="feedback" rows="2" cols="21" required></textarea><br><br>
+          </div>
+
+           <select size="1" name="category" >
+            <option> --Please Select Category of Feedback-- </option>
+            <option value="Food" > Food </option>
+            <option value="Drinks"> Drinks </option>
+            <option value="Customer Service"> Customer Service </option>
+            <option value="Others"> Others </option>
+          </select><br><br>
+            
+      
+          <div align="left" style="padding-left: 50px;" >
+
+             <input  type="submit" value="Submit Feedback"> 
+          </div>
+      
+
+        </form>
+      </div>
+    </div>
+
+     <h3>
+      <footer>
+        <small>
+          <i>
+            Copyright &copy; 2020 NTU Food & Beverages
+          </i>
+          <br>
+          <i>
+            <a href="mailto:ntufandb@e.ntu.edu.sg">ntufandb@e.ntu.edu.sg</a>
+          </i>
+        </small>
+      </footer>
+    </h3>
+
+    
+  </div>
+
+   <script type = "text/javascript"  src = "validation1.js" ></script> 
+
+</body>
+</html>

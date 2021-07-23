@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Xin's</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+   <script type = "text/javascript"  src = "hx_calculation.js" >
+   
+    </script>
+    
+</head>
+<body>
+	<div id="wrapper">
+
+    <header>
+      <h1>
+        <img src="food logo.png"width="300" height="150" >
+      </h1>
+    </header>
+
+      <div id="leftcolumn">
+      <nav>
+        <br>
+          <ul style="padding-left: 0px;">
+            <a href="11_index.html">
+              <li>
+                <div style="height: 50px;text-align: center;"  >
+                 <button  type="button" class="button" >
+                    Home</button>
+                </div>
+                
+              </li>
+            </a>
+            <a href="12_food.html">
+              <li>
+                <div style="height: 50px;text-align: center;padding-top: 50px;" >
+                 <button  type="button" class="button">
+                    Xin's</button>
+                </div>
+              </li>
+            </a>
+            <a href="menu.html">
+              <li>
+                <div style="height: 50px;text-align: center;padding-top: 50px;" >
+                 <button  type="button" class="button">
+                    N-Tea-U</button>
+                </div>
+              </li>
+            </a>
+            <a href="14_contactus.html">
+              <li>
+                <div style="height: 50px;text-align: center;padding-top: 50px;" >
+                  <button  type="button" class="button">
+                    Contact Us</button>
+                </div>
+              </li>
+            </a>
+        </ul>
+    </nav>
+    </div>
+
+     <div id="rightcolumn" style="padding-bottom: 40px">
+      <div>
+        <h2 style="text-align: left; padding-left: 40px">
+        Food Menu
+        </h2> 
+      </div>
+      <form action="confirmation.php" method="post" >
+        <table align="center" border="4" style="height: 300px">
+          <tr >
+          	<td>
+          		<img src="chickennoodle.jpg" height="80px" width="100px">
+          	</td>
+            <td name="sd" bgcolor=" #8EE4AF" style="border-right: solid 3px #FFFFFF;font-weight: bold;">
+              Chicken noodle
+            </td>
+            <td align="left" bgcolor=" #8EE4AF" style="padding-left: 10px">
+              Cooked with rich chicken broth and tasty handmade noodles.<br>
+              Regular $3.20
+            </td>
+            <td align="center"> 
+            	Quantity:
+              <input type="text" name="chickenQuantity" id="chickenInput" size ="3"  onkeyup="calculateChicken();totalPrice();"><!--Updates both subtotal and total upon keying -->
+            </td>
+            <td align="center">
+            	Price:
+            <input type="text" name="chickenPrice" id="chickenCost" size ="3" maxlength="4" readonly>
+          </td>
+         </tr>
+         <tr>
+         	<td>
+          		<img src="duckrice.jpg" height="80px" width="100px">
+          	</td>
+          <td style="border-right: solid 3px #FFFFFF;font-weight: bold;">
+            Duck Rice
+          </td>
+          <td align="left" style="padding-left: 10px">
+            Specially prepared duck meat with traditional recipe.<br>
+            Small $3.00 Large $5.00
+            
+          </td>
+          <td align="center">
+            <table id="duckTable1">
+                <tr>
+                  <td>
+                    Small:<br>
+                    Large: <br>
+                  </td>
+                  <td>
+                    <input type="text" name="duckQtySmall" id = "duckSmall"style="width: 80px" onkeyup="calculateduckSmall();totalPrice();" >
+                    <input type="text" name ="duckQtyLarge" id = "duckLarge" style="width: 80px" onkeyup="calculateduckLarge();totalPrice();" > 
+                  </td>
+                </tr>
+              </table>
+          	<!-- Quantity:
+            <input type="text" id="duckInput" name="duckQuantity" size ="3" maxlength="3" onkeyup="duckTypeFirst();totalPrice();"><!--Updates both subtotal and total upon keying --> 
+          </td>
+          <td align="center">
+
+            <table  id="duckTable2">
+                <tr>
+                  <td>
+                    Price(small):<br>
+                    Price(large): <br>
+                  </td>
+                  <td>
+                    <input type="text" name="duckPriceSmall" id="duckSmallCost" style="width: 80px" readonly>
+                    <input type="text" name =" duckPriceLarge"id ="duckLargeCost" style="width: 80px" readonly> 
+                  </td>
+                </tr>
+              </table>
+          	<!-- Price:
+            <input type="text" id="duckCost" name="duckPrice" size ="3" maxlength="3" readonly> -->
+          </td>
+         </tr>
+         <tr>
+         	<td>
+          		<img src="fried.jpg" height="80px" width="100px">
+          	</td>
+          <td bgcolor=" #8EE4AF" style="border-right: solid 3px #FFFFFF;font-weight: bold;">
+           Fried chicken and fish set
+          </td>
+          <td align="left" bgcolor="#8EE4AF" style="padding-left: 10px">
+            Crispy fried chicken and fish paired with homemade sauce.<br>
+            Small $3.50 Large $5.50<!--Updates both subtotal and total upon pressing button -->
+            
+          </td>
+          <td align="center">
+            <table id="friedTable1">
+                <tr>
+                  <td>
+                    Small:<br>
+                    Large: <br>
+                  </td>
+                  <td>
+                    <input type="text" name="friedQtySmall" id = "friedSmall"style="width: 80px" onkeyup="calculatefriedSmall();totalPrice();" >
+                    <input type="text" name ="friedQtyLarge" id = "friedLarge" style="width: 80px" onkeyup="calculatefriedLarge();totalPrice();" > 
+                  </td>
+                </tr>
+              </table>
+          	<!-- Quantity:
+            <input type="text" id="friedInput" name="friedQuantity" size ="3" maxlength="3" onkeyup="friedTypeFirst();totalPrice();"> -->
+          </td>
+          <td align="center">
+
+              <table  id="duckTable2">
+                <tr>
+                  <td>
+                    Price(small):<br>
+                    Price(large): <br>
+                  </td>
+                  <td>
+                    <input type="text" name= "friedPriceSmall"id="friedSmallCost" style="width: 80px"  readonly>
+                    <input type="text" name= "friedPriceLarge"id ="friedLargeCost" style="width: 80px" readonly> 
+                  </td>
+                </tr>
+              </table>
+          	<!-- Price:
+            <input type="text" id="friedCost" name="friedPrice" size ="3" maxlength="3" readonly> -->
+          </td>
+         </tr>
+        </table>
+        <br>
+        <table>
+          <tr >
+            <label for="country">Total Price:</label>
+          <input type="text" id="totalCost" name="totalPrice1" readonly size ="5" maxlength="5">
+          </tr>
+          <tr>
+            <input type="submit" value="Order" >
+          </tr>
+        </table>
+        <!-- <div style="padding-left: 400px">
+          <label for="country">Total Price:</label>
+          <input type="text" id="totalCost" name="totalPrice1" readonly size ="5" maxlength="5">
+        </div>
+        <input type="submit" value="Order" > -->
+        </form>
+      </div>
+
+    <h3>
+      <footer>
+        <small>
+          <i>
+            Copyright &copy; 2020 NTU Food & Beverages
+          </i>
+          <br>
+          <i>
+            <a href="mailto:ntufandb@e.ntu.edu.sg">ntufandb@e.ntu.edu.sg</a>
+          </i>
+        </small>
+      </footer>
+    </h3>
+   </div>
+
+</body>
+</html>

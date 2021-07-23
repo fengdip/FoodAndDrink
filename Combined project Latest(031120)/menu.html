@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>
+    Home Page
+  </title>
+  <meta charset="utf-8">
+    <style>
+    .Column-VL{border-right: thin solid #000000 ; }
+    table { 
+            width: 600px;
+            border-spacing: 0;
+            border-collapse: collapse;
+            color: #43302e;}
+
+    body { font-family:Verdana, Arial, sans-serif;
+          background-color: #EDF5E1;}
+
+    td{ padding-top: 5px;
+        padding-bottom: 5px;}
+
+    #wrapper { background-color:  #D0FAEE; 
+               width: 80%;
+               margin: auto;
+               min-width:800px;
+               text-align: center;} 
+
+    #leftcolumn { float: left; width: 155px;
+                  height: 350px;  
+                  text-align: center;
+                  background-color: #D0FAEE;} 
+
+    #rightcolumn { margin-left: 155px;padding-top: 10px; 
+                   padding-bottom: 10px;
+                   background-color: #EEFDEC;} 
+
+    header{ background-color: #8EE4AF; 
+            font-size: 150%; 
+            padding: 10px 10px 10px 10px;
+            align-items: center;
+            font-weight: bold;}
+
+    h2 { color: #43302e; 
+         font-family: arial, sans-serif;font-size: 2.5em;
+         text-align: center;}
+
+    h3{ background-color: #8EE4AF;
+            color: #00005D;
+            margin-top: 0px; 
+            text-align: center;}
+
+    #floatleft { margin: 10px;
+                 float: left;}
+
+    footer { font-size:0.5em;
+             padding-top: 20px;
+             padding-bottom:20px;
+             color: #000000;} 
+
+    nav ul { list-style-type: none;}
+
+    nav a {text-decoration: none; 
+           color: #b38b6d; 
+           font-weight: bold;}
+    .button {
+          padding: 15px 25px;
+          font-size: 24px;
+          text-align: center;
+          cursor: pointer;
+          outline: none;
+          color: #fff;
+          background-color: #4CAF50;
+          border: none;
+          border-radius: 15px;
+          box-shadow: 0 9px #999;
+        }
+
+        .button:hover {background-color: #3e8e41}
+
+        .button:active {
+          background-color: #3e8e41;
+          box-shadow: 0 5px #666;
+          transform: translateY(4px);
+        }
+
+
+  </style>
+   <script type = "text/javascript"  src = "calculation.js" >
+    </script>
+ <form action="send.php" method="post">
+</head>
+<body>
+
+  <div id="wrapper">
+
+    <header>
+      <h1>
+        <img src="drink logo.png"width="300" height="150">
+      </h1>
+    </header>
+
+    <div id="leftcolumn">
+      <nav>
+        <br>
+          <ul style="padding-left: 0px;">
+            <a href="11_index.html">
+              <li>
+                <div style="height: 50px;text-align: center;"  >
+                 <button  type="button" class="button" >
+                    Home</button>
+                </div>
+                
+              </li>
+            </a>
+            <a href="12_food.html">
+              <li>
+                <div style="height: 50px;text-align: center;padding-top: 50px;" >
+                 <button  type="button" class="button">
+                    Xin's</button>
+                </div>
+              </li>
+            </a>
+            <a href="menu.html">
+              <li>
+                <div style="height: 50px;text-align: center;padding-top: 50px;" >
+                 <button  type="button" class="button">
+                    N-Tea-U</button>
+                </div>
+              </li>
+            </a>
+            <a href="14_contactus.html">
+              <li>
+                <div style="height: 50px;text-align: center;padding-top: 50px;" >
+                  <button  type="button" class="button">
+                    Contact Us</button>
+                </div>
+              </li>
+            </a>
+        </ul>
+    </nav>
+    </div>
+
+    <div id="rightcolumn" style="padding-bottom: 40px">
+      <div>
+        <h2 style="text-align: left; padding-left: 40px">
+        Drinks at N-Tea-U
+        </h2> 
+      </div>
+        <table align="center">
+          <tr >
+            <td bgcolor="#8EE4AF" name = "NTeaU" style="border-right: solid 3px #FFFFFF;font-weight: bold;">
+              N-Tea-U Special
+            </td>
+            <td align="left" bgcolor=" #8EE4AF"  style="padding-left: 10px">
+              Regular house blend milk tea, flavor of the day.<br>
+              Deluxe $2.00
+            <td bgcolor=" #8EE4AF" align="center"> 
+              <input type="text" id="javaInput" size ="3" maxlength="3" name = "NTeaUqty" placeholder="Qty" onkeyup="calJava();  total();">
+            </td>
+            <td bgcolor=" #8EE4AF" align="center">
+            <input type="text" id="javaCost" size ="3" maxlength="3"  placeholder="$" readonly>  
+          </td>
+         </tr>
+         <tr>
+          <td name = "Hot Coffee" style="font-weight: bold;">
+            Hot Coffee
+          </td>
+          <td align="left"  style="padding-left: 10px">
+            House blended coffee infused into a smooth, steamed milk.<br>
+            <input type="radio" id="cafeSingle"  name="selection1" onclick="calcafeSingle();  total();"> Deluxe $2.00
+            <input type="radio" id="cafeDouble" name="selection2" onclick="calcafeDouble();  total();"> Grande $3.00
+            
+          </td>
+          <td align="center">
+            <input type="text" id="cafeInput" size ="3" maxlength="3" name = "HotCoffeeqty" placeholder="Qty" onkeyup="cafeSelection();  total();">
+          </td>
+          <td align="center">
+            <input type="text" id="cafeCost" size ="3" maxlength="3"  placeholder="$" readonly>
+          </td>
+         </tr>
+         <tr>
+          <td name = "Iced Cappucino" bgcolor=" #8EE4AF" style="border-right: solid 3px #FFFFFF;font-weight: bold;">
+           Iced Cappucino
+          </td>
+          <td align="left"  bgcolor=" #8EE4AF" style="padding-left: 10px">
+            Sweetened Espresso blended with icy-cold milk and served chilled.<br>
+            <input type="radio" id="icedSingle"  name="selection3" onclick="calicedSingle();  total();"> Deluxe $4.75
+            <input type="radio" id="icedDouble"  name="selection4" onclick="calicedDouble();  total();"> Grande $5.75
+            
+          </td>
+          <td bgcolor=" #8EE4AF" align="center">
+            <input type="text" id="icedInput" size ="3" maxlength="3" name = "IcedCappucinoqty" placeholder="Qty" onkeyup="icedSelection();  total();">
+          </td>
+          <td bgcolor=" #8EE4AF" align="center">
+            <input type="text" id="icedCost" size ="3" maxlength="3" placeholder="$" readonly>
+          </td>
+         </tr>
+        </table>
+        <br>
+		
+        <div style="padding-left: 400px">
+          <label for="country">Total Price:</label>
+          <input type="text" id="totalCost"  size ="5" maxlength="5" readonly>
+		  
+		  <input  type="submit" value="Order!">
+		  </form>
+          <br><br>
+        </div>
+	<br>
+	<div>
+	     <h4>Interested to join us? Fill up the form below!</h4>
+		 <form action="join_us.php" method="post"> 
+          <font color="black"></font>Name:   <input type="text"  name="name" size="20"  >&nbsp;&nbsp;
+          <font color="black"></font>Contact:   <input type="text"   name="contact" size="20" ><br><br>
+		  <input  type="submit" value="Apply Now!">
+		 </form>
+	</div>
+
+      </div>
+
+      <h3>
+        <footer>
+          <small>
+            <i>
+            Copyright &copy; 2014 JavaJam Coffee House
+            </i>
+            <br>
+            <i>
+              <a href="mailto:yourfirstname@yourlastname.com">yourfirstname@yourlastname.com</a>
+            </i>
+
+          </small>
+        </footer>
+      </h3>      
+  </div>
+
+
+
+</body>
+</html>
+
+

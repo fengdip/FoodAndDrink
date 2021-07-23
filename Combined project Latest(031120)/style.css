@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
+
+
+ td{ padding-top: 5px;
+        padding-bottom: 5px;}
+.Column-VL{border-right: thin solid #000000 ; }
+    table { 
+            table-layout: fixed;;
+            width: 100%;
+            border-spacing: 0;
+            
+            color: #43302e;}
+body { font-family:Verdana, Arial, sans-serif;
+          background-color: #EDF5E1;}
+
+    #wrapper { background-color: #f0fff0; 
+               width: 80%;
+    		       margin: auto;
+               min-width:800px;
+               text-align: center;} 
+
+    #leftcolumn { float: left; width: 155px;
+                  height: 500px;	
+                  text-align: center;
+                background-color: #D0FAEE;} 
+
+    #rightcolumn { margin-left: 155px;
+                  height: 450px;
+                  padding-top: 10px; 
+                   padding-bottom: 10px;
+                   background-color: #EEFDEC;} 
+     #container {
+                  width: 650px;
+                  height: 500px;
+                  margin: auto;}
+      
+    
+    header{ background-color: #8EE4AF;
+            font-size: 150%; 
+            padding: 10px 10px 10px 10px;
+            align-items: center;}
+
+    h2 { color: #43302e; 
+         font-family: arial, sans-serif;font-size: 3.2em;
+          
+         }
+
+    h3{ background-color: #8EE4AF;
+            color: #00005D;
+            margin-top: 0px; 
+            text-align: center;}
+
+    #floatleft { margin: 10px;
+                 float: left;}
+
+    footer { font-size:0.5em;
+    		     padding-top: 20px;
+             padding-bottom:20px;
+             color: #000000;}	
+
+    nav ul { list-style-type: none;}
+
+    nav a {text-decoration: none; 
+           color: #91b49c; 
+           font-weight: bold;}
+
+    .button {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
